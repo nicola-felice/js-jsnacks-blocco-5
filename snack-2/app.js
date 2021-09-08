@@ -69,5 +69,21 @@ for ( let i = 0; i < zucchine.length; i++ ) {
     }
 }
 
+
+let pesoTotZucchineCorte = 0;
+let pesoTotZucchineLunghe = 0;
+
+for ( let i = 0; i < zucchine.length; i++ ) {
+
+    if ( listaZucchineCorte.includes(zucchine[i]) ) {
+        pesoTotZucchineCorte += zucchine[i].pesoINGrammi;
+    } else {
+        pesoTotZucchineLunghe += zucchine[i].pesoINGrammi;
+    }
+}
+
 console.log(`le zucchine più corte di 15 cm sono:`, listaZucchineCorte);
 console.log(`le zucchine più lunghe di 15 cm sono:`, listaZucchineLunghe);
+
+console.log(`Il peso totale delle zucchine lunghe è: ${pesoTotZucchineLunghe} g`);
+console.log(`Il peso totale delle zucchine corte è: ${pesoTotZucchineCorte} g`);
