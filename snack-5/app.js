@@ -31,4 +31,4 @@ function cutArray(posIniziale, posFinale, array) {
     return newArray;
 }
 
-console.log( cutArray( 7, 3, arrayProva) );
+console.log( cutArray( 3, 7, arrayProva) );

@@ -4,10 +4,17 @@
 
 function revertString(str) {
 
+    // controlla se il valore passato è una stringa
+    if ( !(typeof str === typeof str.toString()) ) {
+        return null;
+    }
+
     let NewStringReverse = str.split("").reverse().join("");
 
     return NewStringReverse;
 }
 
 
-console.log( revertString("bello") )
+console.log( revertString("ciao") );
+console.log( revertString("12345") );
+console.log( revertString(12345) );
