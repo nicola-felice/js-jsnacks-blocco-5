@@ -32,8 +32,27 @@ function cutArray(posIniziale, posFinale, array) {
 }
 
 
+// input: array of numbers
+// output: a string with the numbers list
+function printListOfNumbers(arrayOfNumbers) {
 
-alert(`l'array di partenza è ${arrayProva}`);
+    let stringListNumbers = "";
+
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+    
+        stringListNumbers += `${arrayOfNumbers[i]}`;
+    
+        if ( i != (arrayOfNumbers.length - 1) ) {
+            stringListNumbers += ` _ `;
+        }
+    }
+    
+    return stringListNumbers;
+}
+
+
+
+alert(`l'array di partenza è:  ${printListOfNumbers(arrayProva)}`);
 
 
 let posizioneIniziale = parseInt(prompt(`inserisci la posizione iniziale`));
@@ -54,5 +73,5 @@ let newArray = cutArray(posizioneIniziale, posizioneFinale, arrayProva);
 if ( newArray == null ) {
     alert(`i dati inseriti non sono validi`);
 } else {
-    alert(`l'array ottenuto è ${newArray}`);
+    alert(`l'array ottenuto è:  ${printListOfNumbers(newArray)}`);
 }
