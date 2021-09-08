@@ -5,7 +5,7 @@
 function revertString(str) {
 
     // controlla se il valore passato è una stringa
-    if ( !(typeof str === typeof str.toString()) ) {
+    if ( !(str === str.toString()) ) {
         return null;
     }
 
