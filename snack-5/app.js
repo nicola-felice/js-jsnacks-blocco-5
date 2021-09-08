@@ -31,4 +31,28 @@ function cutArray(posIniziale, posFinale, array) {
     return newArray;
 }
 
-console.log( cutArray( 3, 7, arrayProva) );
+
+
+alert(`l'array di partenza è ${arrayProva}`);
+
+
+let posizioneIniziale = parseInt(prompt(`inserisci la posizione iniziale`));
+
+while ( isNaN(posizioneIniziale) ) {
+    posizioneIniziale = parseInt(prompt(`Attenzione!! inserisci la posizione iniziale come numero`));
+}
+
+let posizioneFinale = parseInt(prompt(`inserisci la posizione finale`));
+
+while ( isNaN(posizioneFinale) ) {
+    posizioneFinale = parseInt(prompt(`Attenzione!! inserisci la posizione finale come numero`));
+}
+
+
+let newArray = cutArray(posizioneIniziale, posizioneFinale, arrayProva);
+
+if ( newArray == null ) {
+    alert(`i dati inseriti non sono validi`);
+} else {
+    alert(`l'array ottenuto è ${newArray}`);
+}
